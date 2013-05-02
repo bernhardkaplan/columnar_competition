@@ -23,4 +23,4 @@ class parameter_storage(object):
         self.params['n_hc'] = 2
         self.params['n_mc_per_hc'] = 2
         self.params['n_inh_per_hc'] = 1
-
+        self.params['n_exc_per_mc'] = 1
