@@ -42,14 +42,40 @@ class parameter_storage(object):
         ##########################
         # probabilities
         self.params['p_exc_within_mc'] = 0.10
+        self.params['p_ei'] = 0.10
+        self.params['p_ie'] = 0.10
 
         # w_mean, w_sigma
         self.params['w_exc_within_mc'] = 0.005
         self.params['w_sigma'] = 0.25 # *100 % of the mean value
 
+        self.params['w_ei'] = 0.005 #
+        self.params['w_ie'] = 0.005 #
+
+
+        # delays
+        self.params['standard_delay'], self.params['standard_delay_sigma'] = 1, .1
+        self.params['delay_range'] = (.1, 2.)
+
+        ##################
+        # INPUT PARAMS
+        ##################
+        self.params['stim_duration'] = 100.
+        self.params['stim_start'] = 0.
+        self.params['stim_rate'] = 100.
+        self.params['stim_stop'] = 100.
+
+        ########################
+        # SIMULATION PARAMETERS
+        ########################
+        self.params['sim_stop'] = 1000.
 
         #########
         # SEEDS 
         ########
+        self.params['rng_seeds_seed'] = 1234
         self.params['seed_conn'] = 0
+        self.params['stim_seed'] = 4312
+
+
 
